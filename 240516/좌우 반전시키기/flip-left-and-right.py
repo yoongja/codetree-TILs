@@ -22,10 +22,8 @@ for i in range(n):
             arr[i] = 1
             arr[i + 1] = abs(arr[i + 1] - 1)
             cnt += 1
-        elif i + 1 == n:
-            if arr[i] == 0 and arr[i - 1] == 1:
+        elif i + 1 == n: # 마지막 항
+            if arr[i] == 0:
                 cnt = -1
-            elif arr[i] == 0 and arr[i - 1] == 0:
-                cnt += 1
 
 print(cnt)
