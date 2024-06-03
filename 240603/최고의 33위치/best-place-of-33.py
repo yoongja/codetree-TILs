@@ -16,9 +16,9 @@ max_money = 0
 
 for y in range(n - 2):
     for x in range(n - 2):
-        if abs(y - x) > 2:
-            continue
-        money = calculate_coin(y, x)
-        max_money = max(money, max_money)
+        if abs(y - x) <= 2:
+
+            money = calculate_coin(y, x)
+            max_money = max(money, max_money)
 
 print(max_money)
