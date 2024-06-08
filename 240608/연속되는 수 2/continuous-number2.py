@@ -1,4 +1,8 @@
+import sys
 n= int(input())
+if n==1:
+    print(1)
+    sys.exit()
 cnt=0
 result=[]
 for i in range(n):
