@@ -16,4 +16,6 @@ for i in range(n):
     else:
         cnt+=1
     x=sub
+if cnt!=0:
+    result.append(cnt)
 print(max(result)+1)
