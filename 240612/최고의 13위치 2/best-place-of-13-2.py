@@ -1,7 +1,9 @@
 n = int(input())
 
+arr = []
 for _ in range(n):
-    list(map(int, input().split()))
+    row = list(map(int, input().split()))
+    arr.append(row)
 
 max_cnt = 0
 
