@@ -1,6 +1,6 @@
 n = int(input())
 
-for_in range(n):
+for _ in range(n):
     list(map(int, input().split()))
 
 max_cnt = 0
