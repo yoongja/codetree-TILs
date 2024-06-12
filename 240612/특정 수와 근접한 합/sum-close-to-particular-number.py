@@ -5,9 +5,9 @@ min_val = 1e15
 
 for i in range(n):
     for j in range(n):
-        if l[i] == l[j]:
+        if i==j:
             continue
-        tmp = sum(l) - l[i] - l[j]
+        tmp = sum(l) - (l[i] + l[j])
         minus = abs(s - tmp)
         min_val = min(min_val, minus)
 
