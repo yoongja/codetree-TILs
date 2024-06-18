@@ -51,6 +51,9 @@ for _ in range(1,k+1):
     for i in range(n):
         cnt=0
         for l in range(m):
+            if can_go(i,l):
+                visited[i][l]=1
+                cnt+=1
             dfs(i,l)
             if cnt!=0:
                 result[_-1]+=1
