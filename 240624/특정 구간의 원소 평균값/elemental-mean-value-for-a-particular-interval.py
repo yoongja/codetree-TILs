@@ -3,16 +3,18 @@ arr = list(map(int, input().split()))
 
 ans = 0
 #구간은 1부터 n까지의 경우의 수를 가진다
-for i in range(1, n+1): #i 만큼의 크기가 구간의 크기
-    #print("구간크기", i) # 구간의 크기가 i일때
-    for j in range(n-i+1):
-        now = arr[j:j+i]
-        #print(now)
-        tmp_avg = sum(now)//i 
-        #print(tmp_avg)
+for i in range(n):
+    for j in range(i,n):
+        tmp_sum = 0 
+        for k in range(i,j+1):
+            tmp_sum += arr[k]
+        
+        tmp_avg = tmp_sum / (j-i+1)
 
-        for n in now:
-            if n == tmp_avg:
-                ans += 1
-                break
+        exists = False
+        for k in range(i, j + 1):
+            if arr[k] == tmp_avg:
+                exists = True
+        if exists:
+            ans += 1
 print(ans)
