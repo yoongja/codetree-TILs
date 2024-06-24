@@ -3,7 +3,7 @@ arr = list(map(int, input().split()))
 ans = 10000
 # t번 이상이므로
 for i in range(n-t+1):
-    now = arr[i:i+h]
+    now = arr[i:i+t]
     #print(now)
     tmp_cnt = 0 
     for n in now:
