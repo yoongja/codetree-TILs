@@ -10,7 +10,7 @@ visited=[[0 for x in range(m)]for _ in range(n)]
 def can_go(x,y):
     if x<0 or y<0 or x>m or y>n:
         return False
-    if graph[x][y]==0 or visited[x][y]==1:
+    elif graph[x][y]==0 or visited[x][y]==1:
         return False
     return True
     
