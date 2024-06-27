@@ -2,7 +2,7 @@ from collections import deque
 
 n, m = map(int, input().split())
 
-arr = [list(map(int, input().split())) for _ in range(m)]
+arr = [list(map(int, input().split())) for _ in range(n)]
 
 # for i in range(m):
 #     arr.append(list(map(int, input().split())))
@@ -15,7 +15,7 @@ q.append([0,0])
 dx = [0, 0, 1, -1]
 dy = [1,-1, 0, 0]
 
-visited = [[False] * n for _ in range(m)]
+visited = [[False] * m for _ in range(n)]
 
 flag = 0
 
@@ -27,8 +27,8 @@ while q:
     for i in range(4):
         nx = x + dx[i]
         ny = y + dy[i]
-        if 0 <= nx < n and 0 <= ny < m and arr[ny][nx] == 1 and not visited[ny][nx]:
-            if nx == n-1 and ny == m-1:
+        if 0 <= nx < m and 0 <= ny < n and arr[ny][nx] == 1 and not visited[ny][nx]:
+            if nx == m-1 and ny == n-1:
                 flag = 1
             q.append([ny,nx])
             visited[ny][nx] = True
