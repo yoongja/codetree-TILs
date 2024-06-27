@@ -2,10 +2,10 @@ from collections import deque
 
 n, m = map(int, input().split())
 
-arr = []
+arr = [list(map(int, input().split())) for _ in range(m)]
 
-for i in range(m):
-    arr.append(list(map(int, input().split())))
+# for i in range(m):
+#     arr.append(list(map(int, input().split())))
 
 
 q = deque()
