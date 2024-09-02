@@ -20,7 +20,7 @@ def dfs(x,y):
 
 visited[0][0] = True
 dfs(0,0)
-if visited[n-1][m-1]:
-    print(0)
-else:
+if visited[n-1][m-1] == True:
     print(1)
+else:
+    print(0)
