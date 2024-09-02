@@ -7,7 +7,7 @@ for i in range(n):
 
 visited = [[0 for _ in range(m)] for _ in range(n)]
 
-dir = [(0, 1), (1, 0),]
+dir = [(0, 1), (1, 0)]
 
 def dfs(x, y):
     for d in dir:
