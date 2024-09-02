@@ -11,17 +11,23 @@ for i in range(m):
 
 #print(l)
 # 1에서 시작해서 도달할 수 있는 정점의 수
-count = 0
+
 visited = [False for i in range(n+1)]
 #print(visited)
 
 def dfs(vertex):
-    global count
     for curr_v in l[vertex]:
         if not visited[curr_v]:
             visited[curr_v] = True
-            count += 1
             dfs(curr_v)
             
 dfs(1)
-print(count-1)
+count = 0
+
+for i in range(len(visited)):
+    if i == 1:
+        continue
+    else:
+        if visited == True:
+            count += 1
+print(count)
