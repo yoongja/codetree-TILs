@@ -22,12 +22,11 @@ def dfs(vertex):
             dfs(curr_v)
             
 dfs(1)
-count = 0
 
+count = 0
+# print(visited)
 for i in range(len(visited)):
-    if i == 1:
-        continue
-    else:
-        if visited == True:
+    if i != 1:
+        if visited[i] == True:
             count += 1
 print(count)
