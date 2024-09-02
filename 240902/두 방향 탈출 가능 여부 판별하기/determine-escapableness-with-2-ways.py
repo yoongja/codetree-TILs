@@ -7,7 +7,7 @@ for i in range(n):
 
 visited = [[0 for _ in range(m)] for _ in range(n)]
 
-dir = [(0, 1), (0, -1), (1, 0), (-1, 0)]
+dir = [(0, 1), (1, 0),]
 
 def dfs(x, y):
     for d in dir:
@@ -20,8 +20,4 @@ def dfs(x, y):
 
 visited[0][0] = 1
 dfs(0, 0)
-if visited[n-1][m-1] == 1:
-    print(0)
-else:
-    print(1)
-#print(visited[n - 1][m - 1])
+print(visited[n - 1][m - 1])
