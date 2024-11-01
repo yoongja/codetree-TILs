@@ -38,8 +38,6 @@ for i in range(n):
             count_list.append(count)
 count_list.sort()
 
-c = 0
-for s in bomb:
-    c += 1
 
-print(c, count_list[-1])
+
+print(len(bomb), count_list[-1])
