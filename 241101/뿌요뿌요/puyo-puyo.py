@@ -13,11 +13,7 @@ dx = [1,-1,0,0]
 dy = [0,0,1,-1]
 
 def dfs(x, y, num):
-    global bomb
     global count
-    
-    if count >= 4:
-        bomb.add(num)
 
     for i in range(4):
         nx = x + dx[i]
@@ -27,7 +23,6 @@ def dfs(x, y, num):
             count += 1
             dfs(nx, ny, num)
 
-bomb = set()
 count_list = []
 for i in range(n):
     for j in range(n):
@@ -36,8 +31,10 @@ for i in range(n):
             visited[i][j] = True
             dfs(i, j, graph[i][j])
             count_list.append(count)
+            
 count_list.sort()
-
-
-
-print(len(bomb), count_list[-1])
+bomb = 0
+for c in count_list:
+    if c >= 4:
+        bomb+=1
+print(bomb, count_list[-1])
